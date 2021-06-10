@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;900&display=swap" rel="stylesheet">
+    <title>My Cube Stopwatch</title>
+
+</head>
+
+<body onkeypress="check(event)">
+    <header>
+        <div>
+            <div>Your Rubik's Timer</div> <em title="developer of this site">By Nimish</em>
+        </div> <i class="fa fa-cog fa-2x" onclick="openSideBar()"></i>
+    </header>
+    <div id="side-bar" class="side-nav">
+        <ul>
+            <li><a target="_blank" href="https://www.youtube.com/c/nimishbandha">My Youtube</a></li>
+            <li onclick="displayInfo()">Info</li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+    </div>
+    <div id="infoBox" class="info-box">
+        <h1 onclick="closeInfo()" class="cross">&times</h1>
+        <h1 class="center-info">Welcome to Your Rubik's Timer, By Nimish Bandha</h1>
+
+        <div>
+            <h2>Info:</h2><br>
+            <div class="info-child">It is primarily made for the solvers who can solve in under 2 minutes.
+                <br>
+                <ul style="margin-left: 30px;">
+                    <li><strong>M:</strong> means minutes<br></li>
+                    <li><strong>S:</strong> means seconds<br></li>
+                    <li><strong>Ms:</strong> means milliseconds</li>
+                </ul>
+                <br>
+                <br>
+                <strong>HOW TO USE:</strong> To start the timer, use the <strong>'enter'</strong> key and to stop it use
+                <strong>'spacebar'</strong>, and to reset the timer use <strong>0</strong>. <br><br>
+                You can change the scramble by yourself by clicking on it, otherwise, it will change after every solve.
+                <br>
+                <br>
+                Average is calculated using all the solves in the solve section. <br><br>
+                <strong>NOTE: once the average time will exceed the 2-minute mark, the average will change into seconds,
+                    so calculate it accordingly!</strong>
+                <br>
+                <br>
+                Let's solve the Rubiks cube now!
+                <br>
+                <br>
+                You can visit my youtube channel to learn various cube, and get faster with 3x3 rubiks cube with CFOP.
+                <a href="https://www.youtube.com/c/nimishbandha">My channel</a>
+            </div>
+        </div>
+
+    </div>
+    <h2 id="scramble" class="scramble" onclick="displayScramble()">L F' R2 D' B' U' F2 D2 F2 U B' R F2 U2 D</h2>
+    <div class="container">
+        <i class="far fa-hand-paper fa-10x fa-flip-horizontal" id="hand1" title="press enter to start"></i>
+        <div class="between">
+            <div class="between-flex">
+                <h2 title="Minutes">M</h2>
+                <h2 title="Seconds">S</h2>
+                <h2 title="Milli Seconds">Ms</h2>
+            </div>
+
+            <h1 id="time" title="press enter to start">0.00</h1>
+            <h3>Press 0 (zero) to reset</h3>
+        </div>
+        <i class="far fa-hand-paper fa-10x" id="hand2" title="press enter to start"></i>
+    </div>
+    <div class="info">
+        <div class="solves">
+            <h4>Solves</h4><button class="delAll" onclick="deleteAll()">Delete all</button>
+            <div class="solve-info-flex">
+                <h2 id="solve-info" title="Minutes">M </h2>
+                <h2 id="solve-info" title="Seconds">S</h2>
+                <h2 id="solve-info" title="Milli Seconds">Ms</h2>
+            </div>
+            <ol id="solve-time">
+            </ol>
+
+        </div>
+        <div id="stats">
+            <h4>Statistics</h4>
+            <h5 id='mean' class="stats-flex">
+                Average : <div id="avg">0</div>
+            </h5>
+        </div>
+    </div>
+    <footer id="contact" class="footer">
+        <h2>
+            <em>Your Rubik's Timer, By Nimish Bandha</em> &copy;
+        </h2>
+        <div>
+            <a target="_blank" href="https://www.facebook.com/nimishbandha"><i id="fb"
+                    class="fab fa-facebook-square fa-2x"></i></a>
+            <a target="_blank" href="https://www.instagram.com/nimish_380"><i id="insta"
+                    class="fab fa-instagram fa-2x"></i></a>
+            <a target="_blank" href="https://www.youtube.com/c/nimishbandha"><i id="yt"
+                    class="fab fa-youtube fa-2x"></i></a>
+            <a target="_blank" href="https://www.twitter.com/bandhanimish">
+                <i id="tweet" class="fab fa-twitter fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+
+</html>
