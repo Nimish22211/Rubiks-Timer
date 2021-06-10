@@ -48,9 +48,9 @@ function check(event) {
         div.innerHTML = document.getElementById('time').innerHTML;
         div.setAttribute('id', 'del')
         document.getElementById('solve-time').appendChild(div)
-        var Delete = document.createElement('div'); // create delete btn
-        Delete.innerHTML = 'delete';
-        document.getElementById('solve-time').appendChild(Delete).classList.add('delete')
+        // var Delete = document.createElement('div'); // create delete btn
+        // Delete.innerHTML = 'delete';
+        // document.getElementById('solve-time').appendChild(Delete).classList.add('delete')
         //create element to display avg
         var newMinutes, newMin2, newSeconds, newMs = 0;
         if (minutes >= 0) {
