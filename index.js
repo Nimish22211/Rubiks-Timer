@@ -84,8 +84,10 @@ function check(event) {
                 element /= 100
                 element = element.toFixed(2)
 
-                if (element >= 60) {
+                if (element >= 60 && element <= 120) {
                     document.getElementById('avg').innerHTML = `1.${(element - 60).toFixed(2)}`
+                } else if (element >= 120) {
+                    document.getElementById('avg').innerHTML = element
                 }
                 else {
                     document.getElementById('avg').innerHTML = element
